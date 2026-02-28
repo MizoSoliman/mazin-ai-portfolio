@@ -126,12 +126,16 @@ section{padding:96px 0;position:relative;z-index:2}
 .pv1{background:linear-gradient(135deg,rgba(52,211,153,.08),rgba(96,165,250,.12))}
 .pv2{background:linear-gradient(135deg,rgba(244,114,182,.08),rgba(251,191,36,.1))}
 .pv3{background:linear-gradient(135deg,rgba(167,139,250,.1),rgba(96,165,250,.08))}
+.pv4{background:linear-gradient(135deg,rgba(251,191,36,.08),rgba(52,211,153,.1))}
+.pv5{background:linear-gradient(135deg,rgba(96,165,250,.1),rgba(167,139,250,.08))}
 .proj-visual::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:28px 28px}
 .proj-icon-wrap{width:70px;height:70px;border-radius:18px;display:flex;align-items:center;justify-content:center;position:relative;z-index:1;backdrop-filter:blur(10px);transition:transform .3s}
 .proj-icon-wrap .icon{width:32px;height:32px}
 .pi1{background:rgba(52,211,153,.15);color:var(--p4);border:1px solid rgba(52,211,153,.2)}
 .pi2{background:rgba(244,114,182,.15);color:var(--p3);border:1px solid rgba(244,114,182,.2)}
 .pi3{background:rgba(167,139,250,.15);color:var(--p1);border:1px solid rgba(167,139,250,.2)}
+.pi4{background:rgba(251,191,36,.15);color:#fbbf24;border:1px solid rgba(251,191,36,.2)}
+.pi5{background:rgba(96,165,250,.15);color:var(--p2);border:1px solid rgba(96,165,250,.2)}
 .proj-card:hover .proj-icon-wrap{transform:scale(1.1) rotate(5deg)}
 .proj-body{padding:22px;flex:1;display:flex;flex-direction:column}
 .proj-title{font-size:1.02rem;font-weight:700;margin-bottom:8px}
@@ -144,6 +148,7 @@ section{padding:96px 0;position:relative;z-index:2}
 .proj-link{display:inline-flex;align-items:center;gap:7px;padding:8px 16px;background:var(--surface2);border:1px solid var(--border2);border-radius:50px;font-size:.78rem;font-weight:700;color:var(--text);text-decoration:none;transition:all .2s;width:fit-content}
 .proj-link .icon{width:14px;height:14px}
 .proj-link:hover{background:var(--p1);color:#fff;border-color:var(--p1)}
+.proj-links{display:flex;gap:8px;flex-wrap:wrap}
 
 /* ====== CERTIFICATES ====== */
 .certs-section{background:var(--surface)}
@@ -377,33 +382,77 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:24px
     <h2 class="s-title reveal">Featured <span class="grad-text">Work</span></h2>
     <p class="s-desc reveal">End-to-end AI and ML projects — from data to deployment.</p>
     <div class="proj-grid stagger">
+
+      <!-- 01 Melbourne House Price -->
       <div class="proj-card">
-        <div class="proj-visual pv1"><div class="proj-icon-wrap pi1"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span></div></div>
+        <div class="proj-visual pv1"><div class="proj-icon-wrap pi1"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></span></div></div>
         <div class="proj-body">
-          <h3 class="proj-title" data-lang="proj1_title">Plant Disease Detection</h3>
-          <p class="proj-desc" data-lang="proj1_desc">Deep Learning system using Transfer Learning (EfficientNetB4) to classify plant leaf diseases with high accuracy.</p>
-          <div class="proj-tags"><span class="ptag pt1">TensorFlow</span><span class="ptag pt2">Keras</span><span class="ptag pt3">Computer Vision</span></div>
-          <a href="#" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span><span data-lang="code_btn">Source Code</span></a>
+          <h3 class="proj-title" data-lang="proj1_title">Melbourne Houses Price Prediction</h3>
+          <p class="proj-desc" data-lang="proj1_desc">Complete end-to-end ML solution from raw data analysis to an interactive Streamlit web app. Predicts house prices in Melbourne using real estate data from Kaggle.</p>
+          <div class="proj-tags"><span class="ptag pt1">Scikit-Learn</span><span class="ptag pt2">Streamlit</span><span class="ptag pt3">Regression</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/MizoSoliman/Final-Project-Melborn-House-Price-Predictions-" target="_blank" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span><span data-lang="code_btn">Source Code</span></a>
+            <a href="https://www.linkedin.com/in/mazinyaser/" target="_blank" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>LinkedIn</a>
+          </div>
         </div>
       </div>
+
+      <!-- 02 ASL Recognition -->
       <div class="proj-card">
-        <div class="proj-visual pv2"><div class="proj-icon-wrap pi2"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span></div></div>
+        <div class="proj-visual pv5"><div class="proj-icon-wrap pi5"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg></span></div></div>
         <div class="proj-body">
-          <h3 class="proj-title" data-lang="proj2_title">Vehicle Insurance Fraud</h3>
-          <p class="proj-desc" data-lang="proj2_desc">End-to-End ML project predicting fraud in insurance claims with interactive Streamlit UI.</p>
-          <div class="proj-tags"><span class="ptag pt1">Scikit-Learn</span><span class="ptag pt2">Streamlit</span><span class="ptag pt3">XGBoost</span></div>
-          <a href="#" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span><span data-lang="code_btn">Source Code</span></a>
+          <h3 class="proj-title" data-lang="proj2_title">ASL Alphabet Recognition</h3>
+          <p class="proj-desc" data-lang="proj2_desc">CNN-based Deep Learning model classifying 36 ASL gesture classes — 26 letters (A–Z) and 10 digits (0–9).</p>
+          <div class="proj-tags"><span class="ptag pt1">TensorFlow</span><span class="ptag pt2">CNN</span><span class="ptag pt3">Computer Vision</span></div>
+          <div class="proj-links">
+            <a href="https://colab.research.google.com/drive/1573CdpPFaIEPkLpZQ4oY8pWpZ-e_ezT4#scrollTo=1FR-i8m5aXzJ" target="_blank" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span><span data-lang="code_btn">Source Code</span></a>
+            <a href="https://www.linkedin.com/in/mazinyaser/" target="_blank" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>LinkedIn</a>
+          </div>
         </div>
       </div>
+
+      <!-- 03 Advanced Snake Game -->
       <div class="proj-card">
         <div class="proj-visual pv3"><div class="proj-icon-wrap pi3"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg></span></div></div>
         <div class="proj-body">
-          <h3 class="proj-title" data-lang="proj3_title">AI Snake Game</h3>
-          <p class="proj-desc" data-lang="proj3_desc">Snake game where AI navigates autonomously using Greedy Best-First Search algorithms.</p>
-          <div class="proj-tags"><span class="ptag pt1">Python</span><span class="ptag pt2">Algorithms</span><span class="ptag pt3">AI Search</span></div>
-          <a href="#" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span><span data-lang="code_btn">Source Code</span></a>
+          <h3 class="proj-title" data-lang="proj3_title">Advanced Snake Game with AI Mode</h3>
+          <p class="proj-desc" data-lang="proj3_desc">Greedy Best-First Search AI, dynamic difficulty (Easy/Normal/Hard), golden fruits, high-score saving, theme switching & smooth animations.</p>
+          <div class="proj-tags"><span class="ptag pt1">Python</span><span class="ptag pt2">Pygame</span><span class="ptag pt3">AI Search</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/MizoSoliman/Enhanced-Snake-Game-using-Python-Pygame-but-with-a-twist-the-snake-can-now-think-." target="_blank" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span><span data-lang="code_btn">Source Code</span></a>
+            <a href="https://www.linkedin.com/in/mazinyaser/" target="_blank" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>LinkedIn</a>
+          </div>
         </div>
       </div>
+
+      <!-- 04 Vehicle Fraud Detection -->
+      <div class="proj-card">
+        <div class="proj-visual pv2"><div class="proj-icon-wrap pi2"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span></div></div>
+        <div class="proj-body">
+          <h3 class="proj-title" data-lang="proj4_title">Vehicle Insurance Fraud Detection</h3>
+          <p class="proj-desc" data-lang="proj4_desc">End-to-end ML pipeline with Streamlit UI to detect fraudulent vehicle insurance claims using XGBoost.</p>
+          <div class="proj-tags"><span class="ptag pt1">Scikit-Learn</span><span class="ptag pt2">Streamlit</span><span class="ptag pt3">XGBoost</span></div>
+          <div class="proj-links">
+            <a href="https://github.com/MizoSoliman/-Vehicle-Fraud-Detection" target="_blank" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span><span data-lang="code_btn">Source Code</span></a>
+            <a href="https://www.linkedin.com/in/mazinyaser/" target="_blank" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 Plant Disease Detection -->
+      <div class="proj-card">
+        <div class="proj-visual pv4"><div class="proj-icon-wrap pi4"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span></div></div>
+        <div class="proj-body">
+          <h3 class="proj-title" data-lang="proj5_title">Plant Disease Detection</h3>
+          <p class="proj-desc" data-lang="proj5_desc">Deep Learning system using Transfer Learning (EfficientNetB4) to classify plant leaf diseases with high accuracy. Expertise in image processing and pre-trained model adaptation.</p>
+          <div class="proj-tags"><span class="ptag pt1">TensorFlow</span><span class="ptag pt2">Keras</span><span class="ptag pt3">EfficientNetB4</span></div>
+          <div class="proj-links">
+            <a href="https://colab.research.google.com/drive/1FJaJKepXJMY5wp7gccyW08qcWLGj6HkJ" target="_blank" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span><span data-lang="code_btn">Source Code</span></a>
+            <a href="https://www.linkedin.com/in/mazinyaser/" target="_blank" class="proj-link"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span>LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -520,15 +569,15 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:24px
         <div class="big">Let's Build Something <span class="grad-text">Intelligent</span> Together</div>
         <p>Available for full-time roles, freelance projects, and AI research collaborations.</p>
         <div class="c-items">
-          <a href="mailto:mazinyasersoliman@gmail.com" class="c-item"><div class="c-ico ci1"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span></div><div><span class="c-label">Email</span><span class="c-val">mazinyasersoliman@gmail.com</span></div></a>
-          <a href="tel:+201063682101" class="c-item"><div class="c-ico ci2"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.1 6.1l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span></div><div><span class="c-label">Phone</span><span class="c-val">+20 106 368 2101</span></div></a>
-          <a href="https://www.linkedin.com/in/mazinyaser" target="_blank" class="c-item"><div class="c-ico ci3"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span></div><div><span class="c-label">LinkedIn</span><span class="c-val">linkedin.com/in/mazinyaser</span></div></a>
+          <a href="mailto:mazinyaser0@gmail.com" class="c-item"><div class="c-ico ci1"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span></div><div><span class="c-label">Email</span><span class="c-val">mazinyaser0@gmail.com</span></div></a>
+          <a href="tel:+201063682101" class="c-item"><div class="c-ico ci2"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.1 6.1l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span></div><div><span class="c-label">Phone</span><span class="c-val">+201063682101 · +201149073567</span></div></a>
+          <a href="https://www.linkedin.com/in/mazinyaser/" target="_blank" class="c-item"><div class="c-ico ci3"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span></div><div><span class="c-label">LinkedIn</span><span class="c-val">linkedin.com/in/mazinyaser</span></div></a>
           <div class="c-item"><div class="c-ico ci4"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span></div><div><span class="c-label">Location</span><span class="c-val">Cairo / Fayoum, Egypt</span></div></div>
         </div>
         <div class="socials">
-          <a href="https://www.linkedin.com/in/mazinyaser" target="_blank" class="soc-btn"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span></a>
-          <a href="#" class="soc-btn"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></a>
-          <a href="mailto:mazinyasersoliman@gmail.com" class="soc-btn"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span></a>
+          <a href="https://www.linkedin.com/in/mazinyaser/" target="_blank" class="soc-btn"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></span></a>
+          <a href="https://github.com/MizoSoliman" target="_blank" class="soc-btn"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></span></a>
+          <a href="mailto:mazinyaser0@gmail.com" class="soc-btn"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span></a>
         </div>
       </div>
       <div class="contact-form-card reveal-r">
@@ -594,8 +643,8 @@ function closeLb(){document.getElementById('lightbox').classList.remove('open');
 
 // LANG
 const T={
-  en:{nav_home:"Home",nav_about:"About",nav_projects:"Projects",nav_cert:"Certificates",nav_contact:"Contact",hero_line1:"Data Scientist",hero_desc:"Hi, I'm Mazin Yaser — transforming complex data into intelligent solutions. Specialized in ML, Deep Learning, Computer Vision & Generative AI.",btn_projects:"View Projects",btn_contact:"Contact Me",about_p1:"I study Computer Science & AI at EELU. Advancing in Generative AI & LLMs through the DEPI scholarship.",about_p2:"Strong experience with Python, TensorFlow and PyTorch — from data to deployment with Streamlit.",proj1_title:"Plant Disease Detection",proj1_desc:"Deep Learning (EfficientNetB4) to classify plant diseases with high accuracy.",proj2_title:"Vehicle Insurance Fraud",proj2_desc:"End-to-End ML predicting insurance fraud with Streamlit UI.",proj3_title:"AI Snake Game",proj3_desc:"Snake AI navigating autonomously using Greedy Best-First Search.",code_btn:"Source Code",form_name:"Name",form_email:"Email",form_message:"Message",form_send:"Send Message"},
-  ar:{nav_home:"الرئيسية",nav_about:"نبذة",nav_projects:"المشاريع",nav_cert:"الشهادات",nav_contact:"تواصل",hero_line1:"مهندس علوم بيانات",hero_desc:"مرحباً، أنا مازن ياسر — متخصص في تحويل البيانات إلى حلول ذكية. خبرة في ML والتعلم العميق والرؤية الحاسوبية والذكاء الاصطناعي التوليدي.",btn_projects:"تصفح المشاريع",btn_contact:"تواصل معي",about_p1:"أدرس علوم الحاسب والذكاء الاصطناعي في EELU، وأطور مهاراتي في Generative AI عبر منحة DEPI.",about_p2:"خبرة عملية في Python وTensorFlow وPyTorch من جمع البيانات حتى النشر بـ Streamlit.",proj1_title:"كشف أمراض النباتات",proj1_desc:"Deep Learning بـ EfficientNetB4 لتصنيف أمراض النباتات.",proj2_title:"كشف الاحتيال في التأمين",proj2_desc:"مشروع ML متكامل للتنبؤ بالاحتيال مع واجهة Streamlit.",proj3_title:"لعبة الثعبان الذكية",proj3_desc:"Snake AI يلعب تلقائياً باستخدام Greedy Best-First Search.",code_btn:"الكود",form_name:"الاسم",form_email:"البريد الإلكتروني",form_message:"الرسالة",form_send:"إرسال"}
+  en:{nav_home:"Home",nav_about:"About",nav_projects:"Projects",nav_cert:"Certificates",nav_contact:"Contact",hero_line1:"Data Scientist",hero_desc:"Hi, I'm Mazin Yaser — transforming complex data into intelligent solutions. Specialized in ML, Deep Learning, Computer Vision & Generative AI.",btn_projects:"View Projects",btn_contact:"Contact Me",about_p1:"I study Computer Science & AI at EELU. Advancing in Generative AI & LLMs through the DEPI scholarship.",about_p2:"Strong experience with Python, TensorFlow and PyTorch — from data to deployment with Streamlit.",proj1_title:"Melbourne Houses Price Prediction",proj1_desc:"Complete end-to-end ML solution from raw data analysis to an interactive Streamlit web app. Predicts house prices in Melbourne using Kaggle data.",proj2_title:"ASL Alphabet Recognition",proj2_desc:"CNN-based Deep Learning model classifying 36 ASL gesture classes — 26 letters (A–Z) and 10 digits (0–9).",proj3_title:"Advanced Snake Game with AI Mode",proj3_desc:"Greedy Best-First Search AI, dynamic difficulty (Easy/Normal/Hard), golden fruits, high-score saving & theme switching.",proj4_title:"Vehicle Insurance Fraud Detection",proj4_desc:"End-to-end ML pipeline with Streamlit UI to detect fraudulent vehicle insurance claims using XGBoost.",proj5_title:"Plant Disease Detection",proj5_desc:"Deep Learning (EfficientNetB4 Transfer Learning) to classify plant leaf diseases with high accuracy.",code_btn:"Source Code",form_name:"Name",form_email:"Email",form_message:"Message",form_send:"Send Message"},
+  ar:{nav_home:"الرئيسية",nav_about:"نبذة",nav_projects:"المشاريع",nav_cert:"الشهادات",nav_contact:"تواصل",hero_line1:"مهندس علوم بيانات",hero_desc:"مرحباً، أنا مازن ياسر — متخصص في تحويل البيانات إلى حلول ذكية. خبرة في ML والتعلم العميق والرؤية الحاسوبية والذكاء الاصطناعي التوليدي.",btn_projects:"تصفح المشاريع",btn_contact:"تواصل معي",about_p1:"أدرس علوم الحاسب والذكاء الاصطناعي في EELU، وأطور مهاراتي في Generative AI عبر منحة DEPI.",about_p2:"خبرة عملية في Python وTensorFlow وPyTorch من جمع البيانات حتى النشر بـ Streamlit.",proj1_title:"التنبؤ بأسعار المنازل في ملبورن",proj1_desc:"حل ML متكامل من تحليل البيانات الخام إلى تطبيق ويب تفاعلي بـ Streamlit للتنبؤ بأسعار العقارات.",proj2_title:"التعرف على أبجدية لغة الإشارة الأمريكية",proj2_desc:"نموذج Deep Learning بـ CNN لتصنيف 36 فئة إيماءة — 26 حرفاً (A–Z) و10 أرقام (0–9).",proj3_title:"لعبة الثعبان المتقدمة بالذكاء الاصطناعي",proj3_desc:"خوارزمية Greedy Best-First Search، مستويات صعوبة ديناميكية، فواكه ذهبية، وحفظ أعلى نتيجة.",proj4_title:"كشف الاحتيال في تأمين السيارات",proj4_desc:"مشروع ML متكامل مع واجهة Streamlit للكشف عن الاحتيال في مطالبات التأمين باستخدام XGBoost.",proj5_title:"كشف أمراض النباتات",proj5_desc:"Deep Learning بـ EfficientNetB4 وTransfer Learning لتصنيف أمراض النباتات بدقة عالية.",code_btn:"الكود",form_name:"الاسم",form_email:"البريد الإلكتروني",form_message:"الرسالة",form_send:"إرسال"}
 };
 let lang=localStorage.getItem('lang')||'en';
 function setLang(l){lang=l;localStorage.setItem('lang',l);document.documentElement.dir=l==='ar'?'rtl':'ltr';document.documentElement.lang=l;document.getElementById('lang-text').textContent=l==='ar'?'EN':'AR';document.body.style.fontFamily=l==='ar'?"'Cairo',sans-serif":"'Space Grotesk',sans-serif";document.querySelectorAll('[data-lang]').forEach(el=>{const k=el.getAttribute('data-lang');if(T[l][k])el.textContent=T[l][k]})}
@@ -612,8 +661,11 @@ document.getElementById('theme-toggle').addEventListener('click',()=>setTheme(th
 
 // NAV
 const navToggle=document.getElementById('nav-toggle'),navMenu=document.getElementById('nav-menu');
-navToggle.addEventListener('click',()=>navMenu.classList.toggle('open'));
-document.querySelectorAll('.nav-link').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();navMenu.classList.remove('open');const t=document.querySelector(a.getAttribute('href'));if(t)t.scrollIntoView({behavior:'smooth'})}));
+navToggle.addEventListener('click',()=>{navMenu.classList.toggle('open')});
+document.querySelectorAll('.nav-link').forEach(l=>l.addEventListener('click',()=>navMenu.classList.remove('open')));
+
+// CONTACT FORM
+document.getElementById('contact-form').addEventListener('submit',function(e){e.preventDefault();const btn=this.querySelector('[type=submit]');btn.innerHTML='<span>Sent!</span>';btn.style.background='var(--p4)';setTimeout(()=>{btn.innerHTML='<span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span data-lang="form_send">Send Message</span>';btn.style.background=''},3000)});
 </script>
 </body>
 </html>
