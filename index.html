@@ -155,7 +155,24 @@ section{padding:96px 0;position:relative;z-index:2}
 .proj-link:hover{background:var(--p1);color:#fff;border-color:var(--p1);animation:float-btn 1.2s ease-in-out infinite}
 .proj-links{display:flex;gap:8px;flex-wrap:wrap}
 
-/* ====== TECHNICAL SKILLS SECTION ====== */
+/* ====== SERVICES SECTION ====== */
+.services-section{background:var(--surface)}
+.srv-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px}
+.srv-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--r);padding:32px 28px;display:flex;flex-direction:column;gap:18px;transition:all .35s;position:relative;overflow:hidden}
+.srv-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transform-origin:left;transition:transform .4s}
+.srv-card:hover::before{transform:scaleX(1)}
+.srv-card:hover{transform:translateY(-8px);box-shadow:0 24px 64px rgba(167,139,250,.15);border-color:rgba(167,139,250,.3)}
+.srv-ico{width:52px;height:52px;border-radius:var(--r);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.srv-ico .icon{width:24px;height:24px}
+.srv-name{font-size:1.05rem;font-weight:800;letter-spacing:-.01em}
+.srv-desc{font-size:.85rem;color:var(--muted);line-height:1.8;flex:1}
+.srv-tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.srv-tag{padding:4px 11px;border-radius:50px;font-size:.68rem;font-weight:700;letter-spacing:.03em;border:1px solid}
+.srv-cta{display:inline-flex;align-items:center;gap:7px;padding:9px 18px;background:var(--surface2);border:1px solid var(--border2);border-radius:50px;font-size:.78rem;font-weight:700;color:var(--text);text-decoration:none;transition:all .2s;width:fit-content;margin-top:8px;cursor:pointer;font-family:inherit}
+.srv-cta .icon{width:14px;height:14px}
+.srv-cta:hover{background:var(--p1);color:#fff;border-color:var(--p1);animation:float-btn 1.2s ease-in-out infinite}
+
+
 .tech-skills-section{background:var(--bg)}
 .ts-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:28px}
 .ts-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:28px;transition:all .3s}
@@ -344,6 +361,7 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:24px
     <a class="nav-link" href="#about" data-lang="nav_about">About</a>
     <a class="nav-link" href="#skills" data-lang="nav_skills">Skills</a>
     <a class="nav-link" href="#projects" data-lang="nav_projects">Projects</a>
+    <a class="nav-link" href="#services" data-lang="nav_services">Services</a>
     <a class="nav-link" href="#certificates" data-lang="nav_cert">Certificates</a>
     <a class="nav-link" href="#contact" data-lang="nav_contact">Contact</a>
   </div>
@@ -619,7 +637,9 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:24px
   </div>
 </section>
 
+
 <!-- CERTIFICATES -->
+
 <section id="certificates" class="certs-section">
   <div class="wrap">
     <span class="s-eyebrow" data-lang="cert_eyebrow">Credentials</span>
@@ -721,6 +741,111 @@ footer{background:var(--surface);border-top:1px solid var(--border);padding:24px
     </div>
   </div>
 </section>
+
+<!-- SERVICES -->
+<section id="services" class="services-section">
+  <div class="wrap">
+    <span class="s-eyebrow" data-lang="srv_eyebrow">What I Offer</span>
+    <h2 class="s-title reveal"><span data-lang="srv_title">My</span> <span class="grad-text" data-lang="srv_title2">Services</span></h2>
+    <p class="s-desc reveal" data-lang="srv_desc">End-to-end AI solutions — from raw data to deployed intelligent systems.</p>
+
+    <div class="srv-grid stagger">
+
+      <!-- ML Model Development -->
+      <div class="srv-card">
+        <div class="srv-ico si1"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 1 1 7.072 0l-.548.547A3.374 3.374 0 0 0 14 18.469V19a2 2 0 1 1-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></span></div>
+        <div class="srv-name" data-lang="srv1_name">ML Model Development</div>
+        <div class="srv-desc" data-lang="srv1_desc">Building and training custom machine learning models tailored to your problem — from regression and classification to advanced ensemble methods, with full evaluation and optimization.</div>
+        <div class="srv-tags">
+          <span class="srv-tag" style="background:rgba(167,139,250,.1);color:var(--p1);border-color:rgba(167,139,250,.25)">Scikit-learn</span>
+          <span class="srv-tag" style="background:rgba(167,139,250,.1);color:var(--p1);border-color:rgba(167,139,250,.25)">XGBoost</span>
+          <span class="srv-tag" style="background:rgba(167,139,250,.1);color:var(--p1);border-color:rgba(167,139,250,.25)">Streamlit</span>
+        </div>
+        <a href="#contact" class="srv-cta"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span data-lang="srv_btn">Get in Touch</span></a>
+      </div>
+
+      <!-- Data Science & NLP -->
+      <div class="srv-card">
+        <div class="srv-ico si5"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span></div>
+        <div class="srv-name" data-lang="srv2_name">Data Science & NLP</div>
+        <div class="srv-desc" data-lang="srv2_desc">End-to-end data science pipelines combined with natural language processing — text classification, sentiment analysis, entity extraction, and intelligent text-based systems.</div>
+        <div class="srv-tags">
+          <span class="srv-tag" style="background:rgba(251,191,36,.1);color:#fbbf24;border-color:rgba(251,191,36,.25)">NLTK</span>
+          <span class="srv-tag" style="background:rgba(251,191,36,.1);color:#fbbf24;border-color:rgba(251,191,36,.25)">Pandas</span>
+          <span class="srv-tag" style="background:rgba(251,191,36,.1);color:#fbbf24;border-color:rgba(251,191,36,.25)">Transformers</span>
+        </div>
+        <a href="#contact" class="srv-cta"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span data-lang="srv_btn">Get in Touch</span></a>
+      </div>
+
+      <!-- Computer Vision -->
+      <div class="srv-card">
+        <div class="srv-ico si3"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M20.188 10.934c.2.646.312 1.329.312 2.066s-.112 1.42-.312 2.066l1.952 1.37a11.046 11.046 0 0 1-1.218 2.684l-2.278-.543a8.961 8.961 0 0 1-1.794 1.794l.543 2.278a11.046 11.046 0 0 1-2.684 1.218l-1.37-1.952A9.068 9.068 0 0 1 12 22a9.068 9.068 0 0 1-2.066-.312l-1.37 1.952a11.046 11.046 0 0 1-2.684-1.218l.543-2.278a8.961 8.961 0 0 1-1.794-1.794l-2.278.543a11.046 11.046 0 0 1-1.218-2.684l1.952-1.37A9.068 9.068 0 0 1 2 12c0-.737.112-1.42.312-2.066L.36 8.564A11.046 11.046 0 0 1 1.578 5.88l2.278.543a8.961 8.961 0 0 1 1.794-1.794L5.107 2.35a11.046 11.046 0 0 1 2.684-1.218l1.37 1.952A9.068 9.068 0 0 1 12 2c.737 0 1.42.112 2.066.312l1.37-1.952a11.046 11.046 0 0 1 2.684 1.218l-.543 2.278a8.961 8.961 0 0 1 1.794 1.794l2.278-.543a11.046 11.046 0 0 1 1.218 2.684l-1.952 1.37z"/></svg></span></div>
+        <div class="srv-name" data-lang="srv3_name">Computer Vision Solutions</div>
+        <div class="srv-desc" data-lang="srv3_desc">Developing deep learning models for image classification, object detection, and visual recognition tasks using CNNs and transfer learning with state-of-the-art architectures.</div>
+        <div class="srv-tags">
+          <span class="srv-tag" style="background:rgba(244,114,182,.1);color:var(--p3);border-color:rgba(244,114,182,.25)">TensorFlow</span>
+          <span class="srv-tag" style="background:rgba(244,114,182,.1);color:var(--p3);border-color:rgba(244,114,182,.25)">OpenCV</span>
+          <span class="srv-tag" style="background:rgba(244,114,182,.1);color:var(--p3);border-color:rgba(244,114,182,.25)">PyTorch</span>
+        </div>
+        <a href="#contact" class="srv-cta"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span data-lang="srv_btn">Get in Touch</span></a>
+      </div>
+
+      <!-- Generative AI & LLMs -->
+      <div class="srv-card">
+        <div class="srv-ico si2"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span></div>
+        <div class="srv-name" data-lang="srv4_name">Generative AI & LLMs</div>
+        <div class="srv-desc" data-lang="srv4_desc">Building intelligent applications powered by large language models — including chatbots, RAG pipelines, prompt engineering systems, and custom AI-driven workflows using LangChain and Hugging Face.</div>
+        <div class="srv-tags">
+          <span class="srv-tag" style="background:rgba(96,165,250,.1);color:var(--p2);border-color:rgba(96,165,250,.25)">LangChain</span>
+          <span class="srv-tag" style="background:rgba(96,165,250,.1);color:var(--p2);border-color:rgba(96,165,250,.25)">Hugging Face</span>
+          <span class="srv-tag" style="background:rgba(96,165,250,.1);color:var(--p2);border-color:rgba(96,165,250,.25)">Prompt Eng.</span>
+        </div>
+        <a href="#contact" class="srv-cta"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span data-lang="srv_btn">Get in Touch</span></a>
+      </div>
+
+      <!-- Data Visualization & Dashboards -->
+      <div class="srv-card">
+        <div class="srv-ico si5"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="2"/><path d="M7 17V13"/><path d="M12 17V7"/><path d="M17 17v-4"/></svg></span></div>
+        <div class="srv-name" data-lang="srv5_name">Data Visualization & Dashboards</div>
+        <div class="srv-desc" data-lang="srv5_desc">Transforming raw data into clear, interactive dashboards and visual reports — helping you understand trends, monitor KPIs, and make data-driven decisions at a glance.</div>
+        <div class="srv-tags">
+          <span class="srv-tag" style="background:rgba(251,191,36,.1);color:#fbbf24;border-color:rgba(251,191,36,.25)">Plotly</span>
+          <span class="srv-tag" style="background:rgba(251,191,36,.1);color:#fbbf24;border-color:rgba(251,191,36,.25)">Streamlit</span>
+          <span class="srv-tag" style="background:rgba(251,191,36,.1);color:#fbbf24;border-color:rgba(251,191,36,.25)">Matplotlib</span>
+        </div>
+        <a href="#contact" class="srv-cta"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span data-lang="srv_btn">Get in Touch</span></a>
+      </div>
+
+      <!-- Predictive Analytics -->
+      <div class="srv-card">
+        <div class="srv-ico si4"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></span></div>
+        <div class="srv-name" data-lang="srv6_name">Predictive Analytics</div>
+        <div class="srv-desc" data-lang="srv6_desc">Forecasting future outcomes from historical data using statistical models and machine learning — from sales prediction and churn analysis to anomaly detection and risk scoring.</div>
+        <div class="srv-tags">
+          <span class="srv-tag" style="background:rgba(52,211,153,.1);color:var(--p4);border-color:rgba(52,211,153,.25)">Time Series</span>
+          <span class="srv-tag" style="background:rgba(52,211,153,.1);color:var(--p4);border-color:rgba(52,211,153,.25)">XGBoost</span>
+          <span class="srv-tag" style="background:rgba(52,211,153,.1);color:var(--p4);border-color:rgba(52,211,153,.25)">Statsmodels</span>
+        </div>
+        <a href="#contact" class="srv-cta"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span data-lang="srv_btn">Get in Touch</span></a>
+      </div>
+
+      <!-- Data Cleaning & Feature Engineering -->
+      <div class="srv-card">
+        <div class="srv-ico si6"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></span></div>
+        <div class="srv-name" data-lang="srv7_name">Data Cleaning & Feature Engineering</div>
+        <div class="srv-desc" data-lang="srv7_desc">Turning messy, incomplete datasets into clean, model-ready data — handling missing values, outliers, encoding, scaling, and crafting powerful features that boost model performance.</div>
+        <div class="srv-tags">
+          <span class="srv-tag" style="background:rgba(167,139,250,.1);color:var(--p1);border-color:rgba(167,139,250,.25)">Pandas</span>
+          <span class="srv-tag" style="background:rgba(167,139,250,.1);color:var(--p1);border-color:rgba(167,139,250,.25)">NumPy</span>
+          <span class="srv-tag" style="background:rgba(167,139,250,.1);color:var(--p1);border-color:rgba(167,139,250,.25)">Scikit-learn</span>
+        </div>
+        <a href="#contact" class="srv-cta"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg></span><span data-lang="srv_btn">Get in Touch</span></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 
 <!-- CONTACT -->
 <section id="contact">
@@ -830,7 +955,16 @@ const T={
     stat_exp:"Years Exp",stat_proj:"Projects",stat_certs:"Certs",stat_tech:"Tech Stack",
     proj_eyebrow:"Projects",proj_title:"Featured",proj_title2:"Work",proj_desc:"End-to-end AI and ML projects — from data to deployment.",
     cert_eyebrow:"Credentials",cert_title:"My",cert_title2:"Certificates",cert_desc:"Click any certificate to view",
-    contact_eyebrow:"Get in touch",contact_big:"Let's Build Something",contact_big2:"Intelligent",contact_big3:"Together",contact_sub:"Available for full-time roles, freelance projects, and AI research collaborations."},
+    contact_eyebrow:"Get in touch",contact_big:"Let's Build Something",contact_big2:"Intelligent",contact_big3:"Together",contact_sub:"Available for full-time roles, freelance projects, and AI research collaborations.",
+    nav_services:"Services",
+    srv_eyebrow:"What I Offer",srv_title:"My",srv_title2:"Services",srv_desc:"End-to-end AI solutions — from raw data to deployed intelligent systems.",srv_btn:"Get in Touch",
+    srv1_name:"ML Model Development",srv1_desc:"Building and training custom machine learning models tailored to your problem — from regression and classification to advanced ensemble methods, with full evaluation and optimization.",
+    srv2_name:"Data Science & NLP",srv2_desc:"End-to-end data science pipelines combined with natural language processing — text classification, sentiment analysis, entity extraction, and intelligent text-based systems.",
+    srv3_name:"Computer Vision Solutions",srv3_desc:"Developing deep learning models for image classification, object detection, and visual recognition tasks using CNNs and transfer learning with state-of-the-art architectures.",
+    srv4_name:"Generative AI & LLMs",srv4_desc:"Building intelligent applications powered by large language models — including chatbots, RAG pipelines, prompt engineering systems, and custom AI-driven workflows using LangChain and Hugging Face.",
+    srv5_name:"Data Visualization & Dashboards",srv5_desc:"Transforming raw data into clear, interactive dashboards and visual reports — helping you understand trends, monitor KPIs, and make data-driven decisions at a glance.",
+    srv6_name:"Predictive Analytics",srv6_desc:"Forecasting future outcomes from historical data using statistical models and machine learning — from sales prediction and churn analysis to anomaly detection and risk scoring.",
+    srv7_name:"Data Cleaning & Feature Engineering",srv7_desc:"Turning messy, incomplete datasets into clean, model-ready data — handling missing values, outliers, encoding, scaling, and crafting powerful features that boost model performance."},
   ar:{nav_home:"الرئيسية",nav_about:"نبذة",nav_skills:"المهارات",nav_projects:"المشاريع",nav_cert:"الشهادات",nav_contact:"تواصل",hero_line1:"مهندس علوم بيانات",hero_line2:"وتعلم آلي",hero_desc:"مرحباً، أنا مازن ياسر — متخصص في تحويل البيانات إلى حلول ذكية. خبرة في ML والتعلم العميق والرؤية الحاسوبية والذكاء الاصطناعي التوليدي.",btn_projects:"تصفح المشاريع",btn_contact:"تواصل معي",btn_cv:"تحميل السيرة الذاتية",about_p1:"مرحباً، أنا مازن ياسر، أعمل على تحويل البيانات المعقدة إلى حلول ذكية. متخصص في التعلم الآلي، والتعلم العميق، ورؤية الحاسوب، والذكاء الاصطناعي التوليدي.",about_p2:"خلال العام الماضي عملت على عدة مجموعات بيانات ونفذت حوالي ثلاثة مشاريع متكاملة، شملت جميع المراحل بدايةً من كتابة الكود وتحليل البيانات وحتى نشر المشروع. كما أدرس حاليًا التعلم العميق بهدف تعزيز خبرتي. وأكملت عدة دورات احترافية: علوم البيانات في Epsilon AI، وتعلم الآلة في ITI، وتدريب الذكاء الاصطناعي في مدينة زويل، وتدريب في التعلم العميق — وأدرس حاليًا الذكاء الاصطناعي التوليدي في معهد رواد مصر الرقمية (DEPI).",proj1_title:"التنبؤ بأسعار المنازل في ملبورن",proj1_desc:"حل ML متكامل من تحليل البيانات الخام إلى تطبيق ويب تفاعلي بـ Streamlit للتنبؤ بأسعار العقارات.",proj2_title:"التعرف على أبجدية لغة الإشارة الأمريكية",proj2_desc:"نموذج Deep Learning بـ CNN لتصنيف 36 فئة إيماءة — 26 حرفاً (A–Z) و10 أرقام (0–9).",proj3_title:"لعبة الثعبان المتقدمة بالذكاء الاصطناعي",proj3_desc:"خوارزمية Greedy Best-First Search، مستويات صعوبة ديناميكية، فواكه ذهبية، وحفظ أعلى نتيجة.",proj4_title:"كشف الاحتيال في تأمين السيارات",proj4_desc:"مشروع ML متكامل مع واجهة Streamlit للكشف عن الاحتيال في مطالبات التأمين باستخدام XGBoost.",proj5_title:"كشف أمراض النباتات",proj5_desc:"Deep Learning بـ EfficientNetB4 وTransfer Learning لتصنيف أمراض النباتات بدقة عالية.",code_btn:"الكود",form_name:"الاسم",form_email:"البريد الإلكتروني",form_message:"الرسالة",form_send:"إرسال",
     skills_eyebrow:"الخبرة",skills_title:"المهارات",skills_title2:"التقنية",skills_desc:"التقنيات والأدوات التي أستخدمها يومياً لبناء حلول ذكية.",
     ts_prog_lang:"لغات البرمجة",ts_libs:"المكتبات والأدوات",ts_envs:"البيئات والمنصات",ts_aiml:"مجالات الذكاء الاصطناعي / ML",
@@ -840,7 +974,16 @@ const T={
     stat_exp:"سنوات خبرة",stat_proj:"مشاريع",stat_certs:"شهادات",stat_tech:"تقنيات",
     proj_eyebrow:"المشاريع",proj_title:"أبرز",proj_title2:"أعمالي",proj_desc:"مشاريع AI و ML متكاملة — من البيانات حتى النشر.",
     cert_eyebrow:"الإنجازات",cert_title:"شهاداتي",cert_title2:"",cert_desc:"اضغط على أي شهادة لتكبيرها",
-    contact_eyebrow:"تواصل معي",contact_big:"لنبني شيئاً",contact_big2:"ذكياً",contact_big3:"معاً",contact_sub:"متاح للعمل بدوام كامل، المشاريع الحرة، والتعاون البحثي في مجال الذكاء الاصطناعي."}
+    contact_eyebrow:"تواصل معي",contact_big:"لنبني شيئاً",contact_big2:"ذكياً",contact_big3:"معاً",contact_sub:"متاح للعمل بدوام كامل، المشاريع الحرة، والتعاون البحثي في مجال الذكاء الاصطناعي.",
+    nav_services:"الخدمات",
+    srv_eyebrow:"ماذا أقدم",srv_title:"خدماتي",srv_title2:"",srv_desc:"حلول ذكاء اصطناعي متكاملة — من البيانات الخام إلى الأنظمة الذكية المنشورة.",srv_btn:"تواصل معي",
+    srv1_name:"تطوير نماذج التعلم الآلي",srv1_desc:"بناء وتدريب نماذج تعلم آلة مخصصة لمشكلتك — من الانحدار والتصنيف إلى أساليب التجميع المتقدمة، مع التقييم والتحسين الكامل.",
+    srv2_name:"علوم البيانات ومعالجة اللغة",srv2_desc:"أنابيب علوم بيانات متكاملة مع معالجة اللغة الطبيعية — تصنيف النصوص، تحليل المشاعر، استخراج الكيانات، وبناء أنظمة ذكية قائمة على النصوص.",
+    srv3_name:"حلول رؤية الحاسوب",srv3_desc:"تطوير نماذج تعلم عميق لتصنيف الصور والكشف عن الأجسام ومهام التعرف البصري باستخدام CNN والتعلم بالنقل مع أحدث المعماريات.",
+    srv4_name:"الذكاء الاصطناعي التوليدي و LLMs",srv4_desc:"بناء تطبيقات ذكية مدعومة بنماذج اللغة الكبيرة — تشمل روبوتات المحادثة وأنابيب RAG وأنظمة هندسة الاستدعاء وسير العمل المدفوعة بالذكاء الاصطناعي.",
+    srv5_name:"تصوير البيانات ولوحات المعلومات",srv5_desc:"تحويل البيانات الخام إلى لوحات معلومات تفاعلية وتقارير بصرية واضحة — لمساعدتك على فهم الاتجاهات ومراقبة مؤشرات الأداء واتخاذ قرارات مدفوعة بالبيانات.",
+    srv6_name:"التحليلات التنبؤية",srv6_desc:"التنبؤ بالنتائج المستقبلية من البيانات التاريخية باستخدام النماذج الإحصائية والتعلم الآلي — من التنبؤ بالمبيعات وتحليل الإلغاء إلى كشف الحالات الشاذة وتقييم المخاطر.",
+    srv7_name:"تنظيف البيانات وهندسة الميزات",srv7_desc:"تحويل مجموعات البيانات الفوضوية وغير المكتملة إلى بيانات نظيفة جاهزة للنماذج — معالجة القيم المفقودة والقيم الشاذة والترميز والتحجيم وابتكار ميزات قوية لتعزيز أداء النماذج."}
 };
 let lang=localStorage.getItem('lang')||'en';
 function setLang(l){lang=l;localStorage.setItem('lang',l);document.documentElement.dir=l==='ar'?'rtl':'ltr';document.documentElement.lang=l;document.getElementById('lang-text').textContent=l==='ar'?'EN':'AR';document.body.style.fontFamily=l==='ar'?"'Cairo',sans-serif":"'Space Grotesk',sans-serif";document.querySelectorAll('[data-lang]').forEach(el=>{const k=el.getAttribute('data-lang');if(T[l][k])el.textContent=T[l][k]})}
